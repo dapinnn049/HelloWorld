@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Romantis</title>
+
+  <!-- Google Fonts: Dancing Script untuk teks romantis -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Style utama -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!--
+    INSTRUKSI SINGKAT:
+    - Untuk mengganti foto default: ganti file "default-photo.jpg" di folder yang sama,
+      atau unggah foto baru lewat tombol "Pilih Foto".
+    - Untuk mengganti kata-kata romantis awal, ubah isi array `initialQuotes` di script.js.
+  -->
+</head>
+<body>
+  <!-- Background animasi hati -->
+  <canvas id="background-canvas" aria-hidden="true"></canvas>
+
+  <main class="container" role="main">
+    <header>
+      <h1 class="title">Untuk Kamu, Cinta</h1>
+    </header>
+
+    <section class="photo-section" aria-label="Foto romantis">
+      <img
+        id="main-photo"
+        src=""C:\Users\DHAFIN\Pictures\Screenshots\Screenshot 2025-09-01 132902.png""
+        alt="Foto romantis"
+        tabindex="0"
+      />
+      <label for="photo-input" class="btn-upload" title="Unggah foto baru">
+        Pilih Foto
+      </label>
+      <input type="file" id="photo-input" accept="image/*" hidden />
+    </section>
+
+    <section class="quote-section" aria-label="Kata-kata romantis">
+      <div id="quote-display" aria-live="polite" aria-atomic="true"></div>
+
+      <form id="quote-form" aria-label="Form tambah kata romantis">
+        <textarea
+          id="quote-input"
+          rows="3"
+          placeholder="Tulis kata-kata romantismu di sini..."
+          required
+          aria-required="true"
+        ></textarea>
+        <button type="submit" class="btn-submit">Tambah Kata</button>
+      </form>
+    </section>
+
+    <section class="music-section" aria-label="Kontrol musik latar">
+      <button id="music-toggle" aria-pressed="false" aria-label="Putar musik">
+        Putar Musik
+      </button>
+      <audio id="bg-music" loop preload="auto" src="romantic-music.mp3"></audio>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* style.css */
+
+/* ====================
+   Reset & Base Styles
+==================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffd1dc 0%, #ffe7f0 100%);
+  color: #6b2d4a;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 480px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* ====================
+   Judul utama
+==================== */
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #b33a5a;
+  text-shadow: 1px 1px 5px #f8c8d8;
+}
+
+/* ====================
+   Foto utama & upload button
+==================== */
+.photo-section {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#main-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(179, 58, 90, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline-offset: 3px;
+}
+
+#main-photo:hover,
+#main-photo:focus {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 12px 25px rgba(179, 58, 90, 0.6);
+  outline: 2px solid #f9c7d9;
+  outline-style: dashed;
+}
+
+.btn-upload {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #f9c7d9;
+  color: #b33a5a;
+  padding: 0.5rem 1.4rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(179, 58, 90, 0.25);
+  transition: background-color 0.3s ease;
+}
+.btn-upload:hover,
+.btn-upload:focus {
+  background: #b33a5a;
+  color: #fff;
+  outline: none;
+}
+
+/* ====================
+   Quote Section & Form
+==================== */
+.quote-section {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 8px 20px rgba(179, 58, 90, 0.15);
+  margin-bottom: 2rem;
+}
+
+#quote-display {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #a63457;
+  min-height: 4.5rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 1s ease;
+  user-select: none;
+}
+
+/* Quote visible */
+#quote-display.visible {
+  opacity: 1;
+}
+
+#quote-form textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #f9c7d9;
+  padding: 0.7rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  resize: vertical;
+  min-height: 70px;
+  transition: border-color 0.3s ease;
+}
+#quote-form textarea:focus {
+  border-color: #b33a5a;
+  outline: none;
+}
+
+.btn-submit {
+  margin-top: 0.8rem;
+  background: #b33a5a;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(179, 58, 90, 0.35);
+  transition: background-color 0.3s ease;
+}
+.btn-submit:hover,
+.btn-submit:focus {
+  background: #ef476f;
+  outline: none;
+}
+
+/* ====================
+   Music Controls
+==================== */
+.music-section {
+  margin-top: 1rem;
+}
+
+#music-toggle {
+  background: #f9c7d9;
+  border: none;
+  color: #b33a5a;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(179, 58, 90, 0.3);
+  transition: background-color 0.3s ease;
+}
+#music-toggle:hover,
+#music-toggle:focus {
+  background: #b33a5a;
+  color: #fff;
+  outline: none;
+}
+
+/* ====================
+   Background Canvas Fullscreen
+==================== */
+#background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ====================
+   Responsive adjustments
+==================== */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  #main-photo {
+    max-width: 100%;
+  }
+}
